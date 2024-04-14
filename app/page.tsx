@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Item from "./item";
 
 export default function Home() {
   return (
@@ -24,17 +25,33 @@ export default function Home() {
         </div>
         <div className="bg-slate-600 nav-end w-12"></div>
       </nav>
-      <div className="container pt-24 flex justify-center items-center p-4">
+      <div className="pt-24 flex justify-center items-center p-4">
         <div className="card h-96 w-64 bg-slate-500 flex justify-center items-center">
           <div className="mt-auto mb-12 bravery grid grid-cols-4">
-            <div className="item armor"></div>
-            <div className="item mainhand"></div>
-            <div className="item sidearm"></div>
-            <div className="item grenade"></div>
-            <div className="item stat-1"></div>
-            <div className="item stat-2"></div>
-            <div className="item stat-3"></div>
-            <div className="item stat-4"></div>
+            <div className="item armor">
+              <Item type="armor" />
+            </div>
+            <div className="item mainhand">
+              <Item type="mainhand" />
+            </div>
+            <div className="item sidearm">
+              <Item type="sidearm" />
+            </div>
+            <div className="item grenade">
+              <Item type="grenade" />
+            </div>
+            <div className="item stat-1">
+              <Item type="stratagem" />
+            </div>
+            <div className="item stat-2">
+              <Item type="stratagem" />
+            </div>
+            <div className="item stat-3">
+              <Item type="stratagem" />
+            </div>
+            <div className="item stat-4">
+              <Item type="stratagem" />
+            </div>
           </div>
         </div>
       </div>
