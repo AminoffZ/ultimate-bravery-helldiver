@@ -2,32 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+  @font-face {
+    font-family: "InsigniaRegular";
+    src: url("/insignia_regular.otf") format("woff");
+    font-weight: normal;
+    font-style: normal;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: theme("colors.stone.900");
+  font-family: "InsigniaRegular", sans-serif !important;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.nav-start {
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+
+.nav-end {
+  clip-path: polygon(100% 0, 0 0, 0 100%);
+}
+
+@media screen and (max-width: 238px) {
+  h1 {
+    font-size: calc(100vw / 238 * 16);
   }
+}
+
+@media screen and (max-width: 288px) {
+  .card {
+    height: calc(100vw / 238 * 318);
+  }
+  .bravery {
+    margin-bottom: calc(100vw / 238 * 40);
+  }
+  .item {
+    width: calc(100vw / 238 * 40) !important;
+    height: calc(100vw / 238 * 40) !important;
+    background-color: white !important;
+    border-radius: calc(100vw / 238 * 8) !important;
+    margin: calc(100vw / 238 * 3) !important;
+  }
+}
+
+.card {
+  clip-path: polygon(
+    5% 0%,
+    95% 0%,
+    100% 5%,
+    100% 95%,
+    95% 100%,
+    5% 100%,
+    0% 95%,
+    0% 5%
+  );
+}
+
+.item {
+  width: 3rem;
+  height: 3rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  margin: 0.25rem;
 }
