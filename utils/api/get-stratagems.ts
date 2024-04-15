@@ -2,7 +2,7 @@ import client from "../supabase/client";
 import { Stratagem } from "../types/items.types";
 import { StratagemQuery } from "../types/query.types";
 
-export async function GetStratagems(
+export async function getStratagems(
   config: StratagemQuery = {
     count: 4,
     classes: ["weapon", "sentry", "orbital", "eagle", "vehicle", "backpack"],

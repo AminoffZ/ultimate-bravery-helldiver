@@ -1,8 +1,10 @@
 import Image from "next/image";
 import EquipmentComponent from "./components/equipment.component";
 import StratagemComponent from "./components/stratagem.component";
+import generateRandomName from "@/utils/namegen";
 
 export default async function Home() {
+  const name = generateRandomName();
   return (
     <main className="bg-primary">
       <nav className="top-0 w-full h-20 flex justify-center ">
@@ -17,17 +19,17 @@ export default async function Home() {
               alt="helldivers"
             />
           </div>
-          <h1
-            style={{ color: "#FDE826" }}
-            className="text-nowrap text-center font-black"
-          >
+          <h1 className="text-nowrap text-center font-black">
             ULTIMATE BRAVERY
           </h1>
         </div>
         <div className="bg-slate-600 nav-end w-12"></div>
       </nav>
       <div className="pt-24 flex justify-center items-center p-4">
-        <div className="card h-96 w-64 bg-slate-500 flex justify-center items-center">
+        <div className="flex-col card h-96 w-64 bg-slate-500 flex justify-center items-center">
+          <h1 className="title mt-4 p-4 font-black text-center text-3xl">
+            {name}
+          </h1>
           <div className="mt-auto mb-12 bravery grid grid-cols-4">
             <div className="item armor">
               <EquipmentComponent type="armor" />

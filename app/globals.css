@@ -14,6 +14,7 @@
 body {
   background-color: theme("colors.stone.900");
   font-family: "InsigniaRegular", sans-serif !important;
+  color: #fde826;
 }
 
 .nav-start {
@@ -42,6 +43,10 @@ body {
     height: calc(100vw / 238 * 40) !important;
     border-radius: calc(100vw / 238 * 8) !important;
     margin: calc(100vw / 238 * 3) !important;
+  }
+  .title {
+    font-size: calc(100vw / 238 * 25);
+    line-height: calc(100vw / 238 * 29);
   }
 }
 

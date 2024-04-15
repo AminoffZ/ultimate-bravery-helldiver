@@ -1,8 +1,8 @@
-import { GetStratagems } from "@/utils/api/get-stratagems";
+import { getStratagems } from "@/utils/api/get-stratagems";
 import Image from "next/image";
 
 export default async function StratagemComponent() {
-  const stratagems = await GetStratagems();
+  const stratagems = await getStratagems();
   console.log(stratagems);
   if (!stratagems || stratagems.length === 0) {
     return null;

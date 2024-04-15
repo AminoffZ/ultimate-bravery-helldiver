@@ -1,7 +1,7 @@
 import client from "@/utils/supabase/client";
 import { Equipment, EquipmentType, Item } from "@/utils/types/items.types";
 
-export async function GetEquipment(
+export async function getEquipment(
   type: EquipmentType
 ): Promise<Equipment | undefined> {
   const { data: items, error } = await client

@@ -1,9 +1,9 @@
 import { EquipmentType } from "@/utils/types/items.types";
 import Image from "next/image";
-import { GetEquipment } from "../../utils/api/get-equipment";
+import { getEquipment } from "../../utils/api/get-equipment";
 
 export default async function Item({ type }: { type: EquipmentType }) {
-  const item = await GetEquipment(type);
+  const item = await getEquipment(type);
   if (!item) {
     return null;
   }
