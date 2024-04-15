@@ -1,10 +1,9 @@
 import Image from "next/image";
 import Item from "./item";
 
-export default function Home() {
+export default async function Home() {
   return (
     <main className="bg-primary">
-      <style></style>
       <nav className="top-0 w-full h-20 flex justify-center ">
         <div className="bg-slate-600 nav-start w-12"></div>
         <div className="flex flex-col justify-center p-2 bg-slate-500 flex-1">

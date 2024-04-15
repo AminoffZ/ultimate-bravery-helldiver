@@ -1,9 +1,11 @@
 import Image from "next/image";
-import { GetRandomItem, type ItemCategory } from "./items";
+import { GetRandomItem, type ItemType } from "./items";
 
-export default function Item({ type }: { type: ItemCategory }) {
+export default async function Item({ type }: { type: ItemType }) {
   console.log(GetRandomItem(type));
-  return (
-    <Image height={100} width={100} src={GetRandomItem(type).image} alt="" />
-  );
+  const item = await GetRandomItem(type);
+  if (!item) {
+    return null;
+  }
+  return <Image height={100} width={100} src={item?.imageUrl} alt="" />;
 }
