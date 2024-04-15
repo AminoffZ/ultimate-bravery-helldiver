@@ -1,5 +1,6 @@
 import Image from "next/image";
-import Item from "./item";
+import EquipmentComponent from "./components/equipment.component";
+import StratagemComponent from "./components/stratagem.component";
 
 export default async function Home() {
   return (
@@ -29,29 +30,18 @@ export default async function Home() {
         <div className="card h-96 w-64 bg-slate-500 flex justify-center items-center">
           <div className="mt-auto mb-12 bravery grid grid-cols-4">
             <div className="item armor">
-              <Item type="armor" />
+              <EquipmentComponent type="armor" />
             </div>
             <div className="item mainhand">
-              <Item type="mainhand" />
+              <EquipmentComponent type="mainhand" />
             </div>
             <div className="item sidearm">
-              <Item type="sidearm" />
+              <EquipmentComponent type="sidearm" />
             </div>
             <div className="item grenade">
-              <Item type="grenade" />
+              <EquipmentComponent type="grenade" />
             </div>
-            <div className="item stat-1">
-              <Item type="stratagem" />
-            </div>
-            <div className="item stat-2">
-              <Item type="stratagem" />
-            </div>
-            <div className="item stat-3">
-              <Item type="stratagem" />
-            </div>
-            <div className="item stat-4">
-              <Item type="stratagem" />
-            </div>
+            <StratagemComponent />
           </div>
         </div>
       </div>
