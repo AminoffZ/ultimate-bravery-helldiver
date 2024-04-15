@@ -10,6 +10,7 @@ export default function Home() {
         <div className="flex flex-col justify-center p-2 bg-slate-500 flex-1">
           <div className="flex justify-center">
             <Image
+              priority
               width={128}
               height={100}
               src={"/helldivers.png"}
